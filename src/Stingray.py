@@ -83,7 +83,7 @@ class ConfigStingray( idaapi.action_handler_t ):
 
 
     @staticmethod
-    def destory():
+    def destroy():
 
         idaapi.unregister_action(ConfigStingray.ACTION_NAME)
         
@@ -337,7 +337,7 @@ class StingrayPlugin( idaapi.plugin_t ):
 
     def term( self ):
 
-        ConfigStingray.destory()
+        ConfigStingray.destroy()
 
         if self.icon_id != 0:
             idaapi.free_custom_icon(self.icon_id)
